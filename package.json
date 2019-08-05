@@ -1,0 +1,16 @@
+{
+  "name": "apps-script-router",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/appsScriptRouter.js",
+  "scripts": {
+    "build": "tsc -project tsconfig.json"
+  },
+  "keywords": [],
+  "author": "Cerlancsim",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/google-apps-script": "^0.0.55"
+  },
+  "dependencies": {}
+}
