@@ -24,10 +24,9 @@ namespace AppsScriptRouter
     type RequestGetResponse<T> = (request: RequestGetBase<T>) => WebAppOutput
     type RequestPostResponse<T> = (request: RequestPostBase<T>) => WebAppOutput
 
-    export type Router<T, U> =
-        {
-            get?: RequestGetResponse<T>
-            post?: RequestPostResponse<U>
-        }
+    export type Router<T, U> = {
+        get?: RequestGetResponse<T>
+        post?: RequestPostResponse<U>
+    }
 
 }
