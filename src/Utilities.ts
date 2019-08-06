@@ -1,3 +1,4 @@
+// App Script is unable to raise a HTTP error code, any errors will return a error page (default or a preset below) with code 200.
 namespace AppsScriptRouter.Helpers
 {
     export function returnEmpty(request: any)

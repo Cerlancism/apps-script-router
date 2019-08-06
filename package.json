@@ -1,7 +1,7 @@
 {
   "name": "apps-script-router",
   "version": "1.0.0",
-  "description": "A barebone REST Router for Google Apps Script web application.",
+  "description": "A barebone HTTP request Router for Google Apps Script web application.",
   "main": "build/appsScriptRouter.js",
   "scripts": {
     "build": "tsc -project tsconfig.json"

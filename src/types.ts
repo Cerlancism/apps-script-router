@@ -28,5 +28,4 @@ namespace AppsScriptRouter
         get?: RequestGetResponse<T>
         post?: RequestPostResponse<U>
     }
-
 }

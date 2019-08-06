@@ -4,10 +4,7 @@ namespace AppsScriptRouter
     {
         constructor(
             private readonly routingRoot: Routable
-        )
-        {
-
-        }
+        ) { }
 
         handleGet(request: RequestGetBase<any>): WebAppOutput
         {
