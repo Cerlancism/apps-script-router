@@ -1,3 +1,3 @@
 ## Apps Script Router
 
-A barebone HTTP request Router for Google Apps Script web application.
+A barebone HTTP request router for Google Apps Script web application.
