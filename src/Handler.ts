@@ -53,7 +53,7 @@ namespace AppsScriptRouter
             while (paths.length > 0)
             {
                 const current = paths.shift() as string
-                routers = routers[Object.getOwnPropertyNames(routers).filter(x => x.toLowerCase() === current.toLowerCase())[0]] as Routable
+                routers = routers[Object.getOwnPropertyNames(routers).filter(x => x === current)[0]] as Routable
 
                 if (!routers)
                 {
