@@ -18,7 +18,7 @@ namespace AppsScriptRouter
 
         private handle(request: RequestGetBase<any> | RequestPostBase<any>, selector: (router: Router<any, any>) => Function | undefined): WebAppOutput
         {
-            const router = this.traversePath(request.pathInfo || "")
+            const router = this.traversePath(request.pathInfo ?? "")
 
             if (router)
             {
@@ -28,7 +28,8 @@ namespace AppsScriptRouter
                     try
                     {
                         return selected(request)
-                    } catch (error)
+                    }
+                    catch (error)
                     {
                         return Helpers.returnError(error, request)
                     }
@@ -53,12 +54,15 @@ namespace AppsScriptRouter
             while (paths.length > 0)
             {
                 const current = paths.shift() as string
-                routers = routers[Object.getOwnPropertyNames(routers).filter(x => x === current)[0]] as Routable
+                const keys = Object.keys(routers)
+                const target = keys.find(x => x === current)
 
-                if (!routers)
+                if (!target)
                 {
-                    break;
+                    break
                 }
+
+                routers = routers[target] as Routable
             }
             return routers as Router<any, any> | undefined
         }

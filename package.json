@@ -1,6 +1,6 @@
 {
   "name": "apps-script-router",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A barebone HTTP request router for Google Apps Script web application.",
   "main": "build/appsScriptRouter.js",
   "scripts": {
@@ -9,6 +9,10 @@
   "keywords": [],
   "author": "Cerlancsim",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cerlancism/apps-script-router"
+  },
   "devDependencies": {
     "@types/google-apps-script": "^1.0.14"
   },
