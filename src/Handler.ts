@@ -54,17 +54,18 @@ namespace AppsScriptRouter
             while (paths.length > 0)
             {
                 const current = paths.shift() as string
-                const keys = Object.keys(routers)
+                const keys = Object.keys(routers as Routable)
                 const target = keys.find(x => x === current)
 
                 if (!target)
                 {
+                    routers = undefined as any
                     break
                 }
 
                 routers = routers[target] as Routable
             }
-            return routers as Router<any, any> | undefined
+            return routers
         }
     }
 }
